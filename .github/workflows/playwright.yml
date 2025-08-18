@@ -154,7 +154,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
 
       - name: Start OpenObserve
         run: chmod +x ./debug-binary/openobserve && ./debug-binary/openobserve > o2.log 2>&1 &
@@ -228,7 +228,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download Playwright Coverage Data
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           pattern: playwright-coverage-* # Match all artifacts with this prefix
           path: merged-coverage
